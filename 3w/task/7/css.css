@@ -1,0 +1,19 @@
+.section{
+    text-align: center;
+}
+
+#title{
+    text-transform: uppercase;
+}
+
+li{
+    list-style-type: square;
+}
+
+li::marker{
+    color: blue;
+}
+
+li:nth-child(2n+1){
+    font-style : italic;
+}

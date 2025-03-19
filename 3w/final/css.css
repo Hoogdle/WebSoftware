@@ -1,0 +1,21 @@
+table{
+    background-image: url(pooh.png);
+    border: 3px brown solid;
+    border-collapse: collapse;
+    width : 100%;
+    height : 100vh;
+}
+
+th{
+    background-image: url(pooh.png);
+    border: 3px brown solid;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even){
+    background-color: yellow;
+}
+
+td{
+    padding: 15px;
+}

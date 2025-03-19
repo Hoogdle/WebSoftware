@@ -1,0 +1,21 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+th, td{
+    border-color :lightgray;
+    padding : 8px;
+}
+
+#date{
+    color : red;
+}
+.tmp{
+    text-decoration-line: line-through;
+}
+
+#hey:hover{
+    background-color: lightgray;
+}
