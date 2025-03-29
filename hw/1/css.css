@@ -1,0 +1,94 @@
+:root{
+    --block_color: lightblue;
+}
+
+#head1{
+    background-color: var(--block_color);
+    margin: 50px;
+}
+
+#head2{
+    margin: 50px;
+}
+
+#head_logo{
+    padding: 10px;
+    margin-left: 15px;
+    margin-top :5px;
+    width: 250px;
+    height: 90px;
+}
+
+#head_buttons {
+    position: absolute;
+    display: inline-block;
+    right: 120px;
+    top: 90px;
+}
+#head_buttons *{
+    width: 65px;
+    height: 35px;
+    border-radius: 12px;
+    border-color: transparent;
+    margin: 5px;
+}
+
+#head_buttons *:hover{
+    background-color: gray;
+}
+
+#head_text{
+    text-align: center;
+}
+
+#head_text *{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#head_line{
+    margin-top: 30px;
+}
+
+
+#banner{
+    width: 250px;
+    position: fixed;
+    bottom: 250px;
+    right: 80px;
+    background-color: var(--block_color);
+    text-align: center;
+    padding: 5px 25px 25px 25px;
+}
+
+.book_contents{
+    width: 500px;
+    margin-left: 50px;
+    text-align: center;
+
+}
+
+.title{
+    font-size: 35px;
+}
+
+.dot_line{
+    margin-top: 20px;
+    border: none;
+    border-top: 5px dotted lightgray;
+}
+
+#input_block{
+    width: 500px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+#input_area{
+    margin: auto;
+    display: block;
+    width: 400px;
+    height: 150px;
+    margin-bottom: 1px;
+}
+
