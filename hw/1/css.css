@@ -31,6 +31,7 @@
     border-radius: 12px;
     border-color: transparent;
     margin: 5px;
+    font-weight: bold;
 }
 
 #head_buttons *:hover{
@@ -52,24 +53,24 @@
 
 
 #banner{
-    width: 250px;
+    width: 220px;
     position: fixed;
-    bottom: 250px;
-    right: 80px;
+    bottom: 300px;
+    right: 150px;
     background-color: var(--block_color);
     text-align: center;
     padding: 5px 25px 25px 25px;
 }
 
 .book_contents{
-    width: 500px;
+    width: 720px;
     margin-left: 50px;
     text-align: center;
 
 }
 
 .title{
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .dot_line{
@@ -79,7 +80,7 @@
 }
 
 #input_block{
-    width: 500px;
+    width: 720px;
     margin-left: 50px;
     text-align: center;
 }
@@ -92,3 +93,40 @@
     margin-bottom: 1px;
 }
 
+#input_button{
+    background-color: var(--block_color);
+    border-color: lightgray;
+}
+
+footer{
+    background-color: var(--block_color);
+    margin: 10px 50px 10px 50px;
+}
+
+
+#footer_contents *{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: right;
+}
+
+#footer_contents{
+    padding: 20px;
+}
+
+
+#footer_anchor{
+    padding: 0px 20px 1px 0px;
+    text-align: right;
+}
+
+#footer_anchor{
+    font-style: italic;
+}
+
+.book_img{
+    width: 250px;
+    height: 350px;
+    position: relative;
+    top: 5px;
+}
