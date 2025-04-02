@@ -1,0 +1,60 @@
+.bg-orange{
+    background-color: #f4511e;
+    color: #ffffff;
+}
+
+.container-fluid{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#email{
+    display: inline-block;
+    width: 250px
+}
+
+#email_button{
+    border-radius: 4px;
+    padding: 5px;
+    border-color: transparent;
+}
+
+.glyphicon-wrench{
+    color: #f4511e;
+    font-size: 50px;
+    padding-top: 20px;
+}
+
+#content1{
+    padding-bottom: 0px;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+}
+
+img:hover{
+    border: solid #e2e2e2 20px;
+}
+
+.name{
+    font-size: 20px;
+}
+
+#hungry{
+    background-color: lightyellow;
+}
+
+input{
+    background-color: white;
+}
+
+#input_area{
+    margin-bottom: 100px;
+}
+
+#hello{
+    margin-top: 0px;
+}
+
