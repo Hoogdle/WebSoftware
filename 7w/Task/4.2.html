@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Shopping Cart</h1>
+
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td><img src="pong.png" alt="fat pooh" width="200px"></td>
+            <td id = "t">Pooh's T-shirts - $10000</td>
+            <td><Button onclick="add2cart('t')">Add to Cart</Button></td>
+        </tr>
+        <tr>
+            <td><img src="pong.png" alt="fat pooh" width="200px"></td>
+            <td id = "s">Pooh's shoose - $100000000</td>
+            <td><Button onclick="add2cart('s')">Add to Cart</Button></td>
+        </tr><tr>
+            <td><img src="pong.png" alt="fat pooh" width="200px"></td>
+            <td id = "p">Pooh's pants - $10000000000</td>
+            <td><Button onclick="add2cart('p')">Add to Cart</Button></td>
+        </tr>
+    </table>
+    <br>
+    <h2>Your Cart</h2>
+
+    <ul id = "basket"></ul>
+    <p id = "total"></p>
+
+    <script>
+        let payment = 0
+        function add2cart(id){
+            let tmp = document.getElementById(id).innerHTML
+            let index = tmp.indexOf("$")
+            let result =  tmp.slice(index+1,tmp.length)
+            payment += parseInt(result)
+
+            let tmpp = document.createElement("li")
+            tmpp.innerHTML = tmp.slice(0,index-3) + ":" + result
+            console.log(tmpp)
+            console.log(result)
+            document.getElementById("basket").appendChild(tmpp)
+            document.getElementById("total").innerHTML = "Total: " + "$" + payment
+        }
+    </script>
+</body>
+</html>

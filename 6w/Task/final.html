@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Restraunt Order</h1>
+    <br>
+    <h2>Menu</h2>
+    <p id ="burger"></p>
+    <p id ="pizza"></p>
+    <p id = "salad"></p>
+    <p id = "pasta"></p>
+    <br><br>
+    <h2>Your Order: <spanid id="result_order"></span></h2>
+    <h2>Total Price: $<span id = "total"></span></h2>
+
+    <script>
+        function show_menu(){
+            document.getElementById("burger").innerHTML = "Burger - $12" 
+            document.getElementById("pizza").innerHTML = "Pizza - $15" 
+            document.getElementById("salad").innerHTML = "Salad - $10"
+            document.getElementById("pasta").innerHTML = "Pasta - $14" 
+        }
+
+        function converter(menu_name){
+            switch(menu_name){
+                case "burger" : return 12
+                case "pizza" : return 15
+                case "salad" : return 10
+                case "pasta" : return 14
+            }
+        }
+
+        function order_menu(){
+            let input1 = prompt("input menu1")
+            let input2 = prompt("input menu2")
+            return [input1, input2]
+        }
+
+        
+
+        function calculate_total(ordered_menu){
+            let total = 0;
+            for(i=0; i<2; ++i){
+                total += converter(ordered_menu[i])         
+            }
+            return total;
+        }
+
+        function show_result(ordered_menu, total){
+            let tmp = ordered_menu[0]+ " " + ordered_menu[1]
+            document.getElementById("result_order").innerHTML = tmp,
+            document.getElementById("total").innerHTML = total
+        }
+
+        const ordered_list = order_menu()
+        show_menu()
+        const result = calculate_total(ordered_list)
+        console.log(result)
+        show_result(ordered_list, result)
+
+        
+        
+        
+    </script>
+</body>
+</html>

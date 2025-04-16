@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Quiz</h1>
+    <hr>
+    <h3>1. What is my name?</h3>
+
+    <form>
+        <input type="radio" name="C1" value="1" >Kim<br>
+        <input type="radio" name = "C1" value="2">Tae<br>
+        <input type="radio" name = "C1" value="3">Yeong<br>
+        <input type="radio" name = "C1" value="4" onclick=finish()>Kim Taeyeong<br>
+    </form>
+
+    <p id = "result"></p>
+    <button id ="act" onclick=show_hint()>Show Hint</button>
+    <p id = "hint"></p>
+    <script>
+        function check(value){
+            switch(value){
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+            }
+        }
+
+        function finish(){
+            document.getElementById("result").innerHTML = "You are Correct!"
+        }
+
+        function show_hint(){
+            document.getElementById("hint").innerHTML = "My name is Kim Taeyeong!"
+        }
+        
+    </script>
+</body>
+</html>

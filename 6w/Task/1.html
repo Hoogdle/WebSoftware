@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bank Balance</h1>
+    <p id = "money"></p>
+    <script>
+        const balance = 1000;
+        const interestRate = 0.05;
+        const newBalance = balance * (1+interestRate);
+        document.getElementById("money").innerHTML = "New balance : $" + newBalance
+    </script>
+</body>
+</html>

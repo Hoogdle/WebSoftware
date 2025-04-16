@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Input Validation</h1>
+
+    <h3>Username:</h3>
+    <input id="username" type="text" placeholder="Enter Username">
+    <h3>Email:</h3>
+    <input id="email" type="text" placeholder="Email"><br><br>
+    <Button onclick = check()>Sign Up</Button>
+    <p id = "alert_un"></p>
+    <p id = "alert_email"></p>
+
+    <script>
+        function check(){
+            let count = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+
+            console.log(count)
+            console.log(email)
+
+            if(count.length<5){
+                document.getElementById("alert_un").innerHTML = "Username must be at least 5 charcters long!!!"
+            }
+
+            if(!(email.includes("@") || email.includes("."))){
+                document.getElementById("alert_email").innerHTML = "Email must contain '@' and '.'"
+            }
+        }
+    </script>
+</body>
+</html>

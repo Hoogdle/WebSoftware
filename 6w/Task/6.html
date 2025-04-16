@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let song_list = []
+        let which_song
+        let new_song
+        for(i=0; i<3; ++i){
+            tmp = prompt("input 3 songs!")
+            song_list.push(tmp)
+        }
+
+        condition = prompt("do you want to change a song?")
+        if(condition == "yes"){
+            which_song = prompt("which song do you want to change?")
+            new_song = prompt("plz type name of new song")
+            song_list[song_list.indexOf(which_song)] = new_song
+        }
+    
+        alert("final song list : " + song_list)
+        
+        
+    </script>
+</body>
+</html>

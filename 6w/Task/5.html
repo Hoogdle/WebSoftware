@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function applyDiscount(input){
+            if(input>100){
+                return input*(1-0.15)
+            } else if(input>= 50 && input<= 100){
+                return input*(1-0.1)
+            }
+        }
+        const input = prompt("input money!")
+        alert("Final Price : $"+applyDiscount(input))
+        
+    </script>
+</body>
+</html>

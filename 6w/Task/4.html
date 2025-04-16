@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Simple String Anylyzer</h1><br>
+    <h2>String info</h2>
+    <p id ="length"></p>
+    <p id = "first"></p>
+    <p id = "last"></p>
+    <p id = "upper"></p>
+    <p id = "contain"></p>
+    <script>
+        const input = prompt("type anything bro!!!");
+
+        let condition;
+        if(input.includes("javascript")){
+            condition = "Yes"
+        } else {
+            condition = "No"
+        }
+        document.getElementById("length").innerHTML = "Length : " + input.length
+        document.getElementById("first").innerHTML = "First Letter : " + input.slice(0,1)
+        document.getElementById("last").innerHTML = "Last Letter : " + input.slice(input.length-1,input.length)
+        document.getElementById("upper").innerHTML = "Uppercase : " + input.toUpperCase()
+        document.getElementById("contain").innerHTML = "Contains 'JavaScript'? " + condition
+    </script>
+</body>
+</html>

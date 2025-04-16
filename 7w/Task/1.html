@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <ol id = "list">
+        <li>Hello</li>
+        <li>im sleepy to day, i dont know what is problem in my body.... but actually during examination period. im just tired toooooooooooo</li>
+        <li>Hallow</li>
+        <li>im sleepy to day, i dont know what is problem in my body.... but actually during examination period. im just tired toooooooooooo</li>
+    </ol>
+    <button onclick=check_list_over()>hi</button>
+    <p id = "result"></p>
+</body>
+
+<script>
+    const list = document.getElementsByTagName("li")
+
+    console.log(list)
+    function check_list_over(){
+        let count = 0
+        for(let i=0; i<list.length; ++i){
+            let text = list[i].innerHTML
+            if(text.length > 10){
+                count++;
+                list[i].style.backgroundColor = "lightgreen"
+            }
+        }
+        document.getElementById("result").innerHTML = "Found" + count + "long item(s)"
+    }
+
+</script>
+</html>
