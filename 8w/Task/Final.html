@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Map</title>
+</head>
+<body>
+    <h1>Taeyeong Map</h1>
+    <p><a href="#" onclick="goto(0)">Seoul</a> | 
+        <a href="#" onclick="goto(1)">Busan</a> | 
+        <a href="#" onclick="goto(2)">Daegu</a> |
+        <a href="#" onclick="goto(3)">Daejeon</a>| 
+        <a href="#" onclick="goto(4)">Gwangju</a>
+    </p>
+
+    <div id="map" style="width:800px;height:500px"></div>
+
+    <script>
+        function myMap() {  
+          var mapCanvas = document.getElementById("map");
+          var myCenter = new google.maps.LatLng(36.6281688, 127.4538403);
+          var mapOptions = {
+              center: myCenter, 
+                zoom: 13
+          };
+          var map = new google.maps.Map(mapCanvas, mapOptions);
+        }
+
+        
+        function goto(n){
+            var mapCanvas = document.getElementById("map");
+            var myCenter
+          
+            switch(n){
+                case 0 :
+                myCenter = new google.maps.LatLng(37.5666791, 126.9782914);
+                break;
+                case 1 :
+                myCenter = new google.maps.LatLng(35.1799528, 129.0752365);
+                break;
+                case 2 :
+                myCenter = new google.maps.LatLng(35.8713, 128.6018);
+                break;
+                case 3 :
+                myCenter = new google.maps.LatLng(36.3497007, 127.3849016);
+                break;
+                case 4 :
+                myCenter = new google.maps.LatLng(35.1594647, 126.8515034);
+                break;
+            }
+
+            var mapOptions = {
+                    center: myCenter, 
+                        zoom: 13
+                };
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+        }
+
+    </script>
+        
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAOy2EyRWFNwuXZGgiyhcskj5RLOWo5Xc&callback=myMap">
+        </script>
+        
+</body>
+</html>

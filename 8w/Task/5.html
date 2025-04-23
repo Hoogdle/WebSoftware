@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="map" style="width:800px;height:500px"></div>
+
+    <script>
+                function myMap() {  
+        var mapCanvas = document.getElementById("map");
+        var myCenter = new google.maps.LatLng(36.6283, 127.4583);
+        var mapOptions = {
+            center: myCenter, 
+                zoom: 7
+        };
+
+    
+        var markers = [
+            new google.maps.LatLng(37.5666791, 126.9782914),
+            new google.maps.LatLng(35.1799528, 129.0752365),
+            new google.maps.LatLng(35.8713, 128.6018),
+            new google.maps.LatLng(36.3496, 127.3848),
+            new google.maps.LatLng(35.1594647, 126.8515034),
+        ];
+
+        var weather = [
+      ['Seoul', 17, 'rainy.png'],
+      ['Busan', 18, 'sunny.png'],
+      ['Daegu', 21, 'cloudy.png'],
+      ['Daejon', 22, 'cloudy.png'],
+      ['Gwangju', 21, 'rainy.png']
+    ];
+
+
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var population = [9.7, 3.4, 2.4, 1.5, 1.5];
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+            map: map
+        });
+        
+        for(let i =0; i<markers.length; ++i){
+            var marker = new google.maps.Marker({
+            position: markers[i],
+            map: map
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+        content: "<p> Population: " + population[i]*1000000 + "</p>" 
+        });
+        infowindow.open(map,marker);
+
+        var myUniversity = new google.maps.Circle({
+            center: markers[i],
+            radius: population[i]*10000,
+            strokeColor: "#FF5733",
+            strokeOpacity: 0.5,
+            strokeWeight: 3,
+            fillColor: "#FF5733",
+            fillOpacity: 0.5});
+            
+            myUniversity.setMap(map);
+        }
+        }
+    </script>
+        
+    <script src="https://maps.googleapis.com/maps/api/js?key=
+    AIzaSyCAOy2EyRWFNwuXZGgiyhcskj5RLOWo5Xc&callback=myMap"></script>
+        
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="map" style="width:800px;height:500px"></div>
+
+    <script>
+        function myMap() {  
+          var mapCanvas = document.getElementById("map");
+          var myCenter = new google.maps.LatLng(36.6281688, 127.4538403);
+          var mapOptions = {
+              center: myCenter, 
+                zoom: 13
+          };
+          var map = new google.maps.Map(mapCanvas, mapOptions);
+        }
+    </script>
+        
+    <script src="https://maps.googleapis.com/maps/api/js?key=
+    AIzaSyCAOy2EyRWFNwuXZGgiyhcskj5RLOWo5Xc&callback=myMap"></script>
+        
+</body>
+</html>
