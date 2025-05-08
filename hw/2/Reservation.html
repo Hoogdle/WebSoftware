@@ -2,19 +2,24 @@
 <html lang="en">
 <head>
     <link href="Reservation.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <p id = "head_left">You are logged in as <a href="#">admin</a></p>
-        <div id ="head_right">
-            <p>Pokedex</p>
-            <p>Shop</p>
-            <Button>Logout</Button>
+    <header class = "container-fluid">
+        <p id = "head_left">You are logged in as <span id="span_admin">admin</span></p>
+        <div id ="head_right" class = "text-right">
+            <a href="#">Pokedex</a>
+            <a href="#">Shop</a>
+            <Button id="logOutButton" class="btn btn-danger">Log out</Button>
         </div>
     </header>
-    <img id = "banner" src="res/osw_wallpaper.jpg" alt="banner image">
+    
+    <div id = "Welcome">
+        <img id = "banner" src="res/osw_wallpaper.jpg" alt="banner image">
+        <h1 class = "text-center">Welcome to PokeWorld!</h1>
+    </div>
 </body>
 </html>

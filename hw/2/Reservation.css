@@ -1,9 +1,7 @@
 #banner{
-    position: absolute;
     left: 0px;
     right: 0px;
     display: block;
-    z-index: -1;
     width: 100%;
 }
 
@@ -11,9 +9,9 @@ header{
     position: absolute;
     left: 0px;
     width: 100%;
-    z-index: 1;
-    top: 30px;
-    height: 80px;
+    z-index: 2;
+    top: 0px;
+    height: 100px;
     background-color: rgb(0,0,255,0.5);
 }
 
@@ -22,24 +20,43 @@ header{
 #head_left{
     float: left;
     position: relative;
-    top: 15px;
+    top: 25px;
     left: 30px;
 }
 #head_right{
-    float: right;
     position: relative;
     top: 30px;
     right: 60px;
 }
 
-#head_right p{
+#head_right a{
     margin-right: 30px;
 }
 
-header p{
+header p, header a{
     opacity: 100%;
     z-index: 2;
     color : black;
     display: inline;
     font-weight: bold;
+    font-size: 30px;
 }
+
+
+
+#logOutButton{
+    position: relative;
+    top: -7px;
+}
+
+#span_admin{
+    text-decoration: underline;
+}
+
+h1{
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 300px;
+}
+
