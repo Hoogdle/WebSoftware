@@ -8,18 +8,45 @@
     <title>Document</title>
 </head>
 <body>
-    <header class = "container-fluid">
+    <nav class = "navbar">
         <p id = "head_left">You are logged in as <span id="span_admin">admin</span></p>
         <div id ="head_right" class = "text-right">
             <a href="#">Pokedex</a>
             <a href="#">Shop</a>
-            <Button id="logOutButton" class="btn btn-danger">Log out</Button>
+            <Button id="logOutButton" class="btn btn-danger" onclick="logOut()">Log out</Button>
         </div>
-    </header>
-    
-    <div id = "Welcome">
-        <img id = "banner" src="res/osw_wallpaper.jpg" alt="banner image">
-        <h1 class = "text-center">Welcome to PokeWorld!</h1>
-    </div>
+    </nav>
+    <img id = "banner" class = "img-fluid" src="res/osw_wallpaper.jpg" alt="banner image">
+    <h1 class = "text-justify text-center">Welcome to Pokemon World!</h1>
+
+
+
+    <main calss = "container-fluid">
+        <img id = "grass" class ="img-fluid" src="res/grass.jpg" alt="grass">
+        <ul id = "pokeball"></ul>
+        <div id = "helper">
+            <div>
+                <img src="res/pokeball.png" alt="pokeball">
+                <p>Available ball</p>
+            </div>
+            <div>
+                <img id = "selected" src="res/pokeball.png" alt="pokeball">
+                <p>Selected Ball</p>
+            </div><div>
+                <img src="res/pokemon.png" alt="pokeball">
+                <p>Result</p>
+            </div>
+        </div>
+        <button id = "gotcha" class = "btn btn-primary" onclick="awake_monster()">Gotcha!</button>
+    </main>
+
+    <footer class = "container-fluid">
+        <p>
+            Web Development HomeWork 2
+        </p>
+    </footer>
+
+
+    <script src = "Reservation.js"></script>
 </body>
 </html>

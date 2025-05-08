@@ -1,52 +1,53 @@
 #banner{
+    position: absolute;
+    top: 0px;
     left: 0px;
     right: 0px;
     display: block;
-    width: 100%;
+    opacity: 70%;
 }
 
-header{
+nav{
     position: absolute;
-    left: 0px;
-    width: 100%;
-    z-index: 2;
-    top: 0px;
-    height: 100px;
-    background-color: rgb(0,0,255,0.5);
+    z-index: 1;
+    background-color: rgb(0,0,0,0.5);
+    height: 150px;
 }
+
 
 
 
 #head_left{
     float: left;
     position: relative;
-    top: 25px;
+    top: 5px;
     left: 30px;
 }
 #head_right{
     position: relative;
-    top: 30px;
+    top: 5px;
     right: 60px;
 }
 
 #head_right a{
     margin-right: 30px;
+    font-weight: bold;
 }
 
-header p, header a{
+nav p, nav a{
     opacity: 100%;
     z-index: 2;
-    color : black;
     display: inline;
-    font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
 }
-
 
 
 #logOutButton{
     position: relative;
     top: -7px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #span_admin{
@@ -54,9 +55,94 @@ header p, header a{
 }
 
 h1{
-    z-index: 2;
+    z-index: 3;
+    text-align: center;
+    position: relative;
     display: block;
-    position: absolute;
-    top: 300px;
+    font-size: 100px !important;
+    opacity: 90%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-top: 120px;
+    padding-bottom: 400px;
 }
 
+
+main{
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+#grass{
+    z-index: 2;
+    width: 1000px;
+    height: 500px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+ul{
+    z-index: 3;
+    width: 950px;
+    display: block;
+    margin: auto;
+    position: relative;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-right: 10px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+
+
+#helper img, #helper p, #helper div{
+    display: inline-block;
+}
+
+#helper{
+    padding-left: 260px;
+}
+#helper img{
+    width: 25px;
+    height: 25px;
+}
+
+#helper div{
+    margin-right: 10px;
+}
+
+#selected{
+    filter :brightness(50%)
+}
+
+#gotcha{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 50px;
+    font-size: large;
+}
+
+footer p{
+    margin-top: 80px;
+    background-color: rgb(0,0,0,0.5);
+    height: 100px;
+    padding-top: 40px;
+    display: block;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+footer{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}

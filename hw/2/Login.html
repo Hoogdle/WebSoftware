@@ -9,11 +9,19 @@
     <title>Document</title>
 </head>
 <body>
-    <img id ="background" src="res/osw2_background.jpg" alt="background image">
-    <img id = "title" src="res/osw2_title.png" alt = "title">
-    <input id = "ID" type="text" placeholder="ID">
-    <input id = "PW" type="password" placeholder="Password">
-    <button id = "LoginButton" onclick= "check_info()">Sign In</button>
+    <img id ="background" src="res/osw2_background.jpg" alt="background image" class = "img-fluid">
+    <img id = "title" src="res/osw2_title.png" alt = "title" class = "img-fluid">
+
+    <form>
+        <div class = "form-group">
+            <input id = "ID" type="text" placeholder="ID">
+            <input id = "PW" type="password" placeholder="Password">
+        </div>
+    </form>
+
+    <button class = "btn" id = "LoginButton" onclick= "check_info()">Sign In</button>
+
+    
 
     <script src = "Login.js"></script>
 </body>
